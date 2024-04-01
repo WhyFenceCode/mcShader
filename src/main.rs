@@ -10,7 +10,7 @@ fn main() {
         Some("--help") => help(),
         Some("-n") => new(args),
         Some("--new") => new(args),
-        _ => println!("Unknown or missing command, {color_red}-h{color_reset} for help"),
+        _ => println!("Unknown or missing commands, {color_red}-h{color_reset} for help"),
     }
 }
 
@@ -48,7 +48,7 @@ fn new(args: Vec<String>) {
         Some("--inlude-less") => u_partition(args),
         Some("-m") => min(args),
         Some("--minimal") => min(args),
-        _ => println!("Unknown or missing command, you need one of the following: -p, --include, -u, --include-less, -m, --minimal, or {color_red}-h{color_reset} for help"),
+        _ => println!("Unknown or missing commands, you need one of the following: -p, --include, -u, --include-less, -m, --minimal, or {color_red}-h{color_reset} for help"),
     }
 }
 
