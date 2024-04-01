@@ -10,7 +10,7 @@ fn main() {
         Some("--help") => help(),
         Some("-n") => new(args),
         Some("--new") => new(args),
-        _ => println!("Unknown or missingcommand, {color_red}-h{color_reset} for help"),
+        _ => println!("Unknown or missing command, {color_red}-h{color_reset} for help"),
     }
 }
 
