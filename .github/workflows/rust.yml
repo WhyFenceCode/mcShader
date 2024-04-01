@@ -1,0 +1,18 @@
+name: Build Rust Projects with Cross and Upload Binaries
+
+on:
+ release:
+    types: [published] # This triggers the workflow on a new release being published
+
+jobs:
+ build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Build Rust Projects with Cross
+      uses: houseabsolute/actions-rust-cross@v0.0.12
+      with:
+        target: stable
+        args: --release
